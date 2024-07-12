@@ -1,4 +1,4 @@
-# Responsive Web Design Project 4 | Product Landing Page
+# Responsive Web Design | Project 4: Product Landing Page
 
 ## User Stories:
 1. Your product landing page should have a `header` element with a corresponding `id="header"`.

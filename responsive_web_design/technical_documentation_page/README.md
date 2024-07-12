@@ -1,4 +1,4 @@
-# Responsive Web Design Project 3 | Technical Documentation Page
+# Responsive Web Design | Project 3: Technical Documentation Page
 
 ## User Stories:
 1. You can see a `main` element with a corresponding `id="main-doc"`, which contains the page's main content (technical documentation).

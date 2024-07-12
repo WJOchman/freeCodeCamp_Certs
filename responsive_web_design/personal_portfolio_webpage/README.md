@@ -1,4 +1,4 @@
-# Responsive Web Design Project 5 | Personal Portfolio Webpage
+# Responsive Web Design | Project 5: Personal Portfolio Webpage
 
 ## User Stories:
 1. Your portfolio should have a welcome section with an `id` of `welcome-section`.

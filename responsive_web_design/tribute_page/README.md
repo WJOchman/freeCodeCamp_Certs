@@ -1,4 +1,4 @@
-# Responsive Web Design Project 2 | Tribute Page
+# Responsive Web Design | Project 2: Tribute Page
 
 ## User Stories:
 1. Your tribute page should have a `main` element with a corresponding `id` of `main`, which contains all other elements.
