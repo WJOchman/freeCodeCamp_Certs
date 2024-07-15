@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out the survey form below:</p>
+        <form id="survey-form">
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br>
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br>
+            <label id="number-label" for="number">Age:</label>
+            <input type="number" id="number" name="age" placeholder="Enter your age" min="0" max="120" required>
+            <br>
+            <label for="dropdown">Role:</label>
+            <select id="dropdown" name="role" required>
+                <option value="">Select your role</option>
+                <option value="student">Student</option>
+                <option value="job">Full-time job</option>
+            </select>
+            <br>
+            <p>Gender:</p>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br>
+            <p>Hobbies:</p>
+            <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+            <label for="hobby1">Reading</label>
+            <input type="checkbox" id="hobby2" name="hobbies" value="traveling">
+            <label for="hobby2">Traveling</label>
+            <br>
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            <br>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
