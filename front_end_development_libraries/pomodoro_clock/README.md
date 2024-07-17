@@ -1,4 +1,4 @@
-# Front End Development Libraries | Project 4: JavaScript Calculator
+# Front End Development Libraries | Project 5: 25 + 5 Clock
 
 ## User Stories: 
 1. I can see an element with `id="break-label"` that contains a string (e.g. "Break Length").
