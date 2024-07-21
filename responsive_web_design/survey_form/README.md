@@ -17,3 +17,6 @@
 14. Inside the form element, you can select several fields from a series of checkboxes, each of which must have a `value` attribute.
 15. Inside the form element, you are presented with a `textarea` for additional comments.
 16. Inside the form element, you are presented with a button with `id` of submit to `submit` all the inputs.
+
+## Survey Form Screenshot
+![Alt text](/responsive_web_design/survey_form/project_screenshot.png)
