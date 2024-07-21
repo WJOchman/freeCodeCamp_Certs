@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey Form</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="section1">
+                <h1 id="title">Survey Form</h1>
+                <p id="description">Please fill out the survey form below:</p>
+            </div>
+            <div class="section2">
+                <form id="survey-form">
+                    <div class="fullName">
+                        <p><label for="first-name">First Name:</label></p>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="fullName">
+                        <p><label for="middle-name">Middle Name:</label></p>
+                        <input type="text" id="middle-name" name="middle-name" placeholder="Enter your middle name">
+                    </div>
+                    <div class="fullName">
+                        <p><label for="surname">Surname:</label></p>
+                        <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+                    </div>
+                    <div class="dateOfBirth">
+                        <p><label for="dob">Date of Birth:</label></p>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="question1">
+                        <p>Gender:</p>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                    <div class="question2">
+                        <p><label for="education">Highest Level of Education:</label></p>
+                        <select id="education" name="education" required>
+                            <option value="">Select your education level</option>
+                            <option value="high-school">High School</option>
+                            <option value="bachelor">Bachelor's Degree</option>
+                            <option value="master">Master's Degree</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                    </div>
+                    <div class="question3">
+                        <p>Which is your favourite engineering discipline? <br> (Select all that apply)</p>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="mechanical-engineering" name="engineering-types" value="mechanical">
+                                <label for="mechanical-engineering">Mechanical Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="electrical-engineering" name="engineering-types" value="electrical">
+                                <label for="electrical-engineering">Electrical Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="civil-engineering" name="engineering-types" value="civil">
+                                <label for="civil-engineering">Civil Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="chemical-engineering" name="engineering-types" value="chemical">
+                                <label for="chemical-engineering">Chemical Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="software-engineering" name="engineering-types" value="software">
+                                <label for="software-engineering">Software Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="aerospace-engineering" name="engineering-types" value="aerospace">
+                                <label for="aerospace-engineering">Aerospace Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="biomedical-engineering" name="engineering-types" value="biomedical">
+                                <label for="biomedical-engineering">Biomedical Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="computer-engineering" name="engineering-types" value="computer">
+                                <label for="computer-engineering">Computer Engineering</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="electronic-engineering" name="engineering-types" value="electronic">
+                                <label for="electronic-engineering">Electronic Engineering</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button id="submit" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <footer class="footer">
+                <div class="footerLinks">
+                    <a href="https://github.com/WJOchman" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/wjochman/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/wojciech-j-ochman/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </footer>
+            <div class="copyrightText">
+                <p>
+                    Copyright <i class="fa fa-copyright"></i> 2024. Made by Wojciech J Ochman for the purpose of acquiring the freeCodeCamp Responsive Web Design certificate. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

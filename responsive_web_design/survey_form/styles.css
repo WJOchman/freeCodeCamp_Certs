@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url(./survey_picture.jpg);
+    background-size:auto;
+    background-position: left top;
+}
+
+/*--- Section 1 ---*/
+
+.section1 {
+    background-color: #38393B;
+    text-align: center;
+    margin: 8vw 20% 0vw 20%;
+    border-radius: 8px;
+}
+
+.section1 h1 {
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    font-weight: 900;
+}
+
+.section1 p {
+    padding: 0vw 12vw 1.2vw 12vw;
+    font-weight: 600;
+    font-size: 12px;
+    color: #98999b;
+}
+
+/*--- Section 2 ---*/
+
+.section2 {
+    background-color: #38393B;
+    margin: 0vw 20% 8vw 20%;
+    text-align: justify;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/*--- Full Name ---*/
+
+.fullName {
+    padding: 30px 0;
+}
+
+.fullName input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.fullName p {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+/*--- Date of Birth ---*/
+
+.dateOfBirth {
+    padding: 30px 0;
+}
+
+.dateOfBirth input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.dateOfBirth p {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+/*--- Question 1 ---*/
+
+.question1 {
+    padding: 30px 0;
+}
+
+.question1 p {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.question1 label {
+    color: white;
+    margin-right: 10px;
+}
+
+/*--- Question 2 ---*/
+
+.question2 {
+    padding: 30px 0;
+}
+
+.question2 select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.question2 p {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+/*--- Question 3 ---*/
+
+.question3 {
+    padding: 20px 0;
+}
+
+.question3 p {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/*--- Submit Button ---*/
+
+.button {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.button button {
+    width: 90%;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: #45a049;
+}
+
+/*--- Footer ---*/
+
+.footer {
+    background-color: #38393B;
+}
+
+.footer .footerTitle {
+    padding: 10px 0;
+}
+
+.footer .footerTitle h2 {
+    text-align: center;
+    font-size: 2vw;
+    color: white;
+}
+
+.footer .footerLinks {
+    text-align: center;
+    padding: 2.5vw;
+}
+
+.footer .footerLinks a {
+    font-size: 3vw;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    text-align: center;
+}
+
+/*--- Footer ---*/
+
+.footer {
+    background-color: #38393B;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerTitle h2 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footerLinks a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footerLinks a:hover {
+    color: #ddd;
+}
+
+/*--- Copyright ---*/
+
+.copyrightText {
+    background-color: #38393B;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    border-top: 1px solid #646568;
+}
