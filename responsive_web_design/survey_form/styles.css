@@ -7,7 +7,7 @@
 
 body {
     background: url(./survey_picture.jpg);
-    background-size:auto;
+    background-size: auto;
     background-position: left top;
 }
 
@@ -42,6 +42,30 @@ body {
     text-align: justify;
     padding: 30px;
     border-radius: 8px;
+}
+
+/*--- Form Group ---*/
+
+.form-group {
+    padding: 30px 0;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.form-group label {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 5px;
+    display: block;
 }
 
 /*--- Full Name ---*/
