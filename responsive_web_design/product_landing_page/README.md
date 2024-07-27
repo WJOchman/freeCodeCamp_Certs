@@ -16,3 +16,6 @@
 13. The navbar should always be at the top of the viewport.
 14. Your product landing page should have at least one media query.
 15. Your product landing page should utilize CSS flexbox at least once.
+
+## Survey Form Screenshot
+![Alt text](/responsive_web_design/product_landing_page/project_screenshot.png)

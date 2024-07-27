@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header id="header">
-        <img id="header-img" src="path_to_logo.jpg" alt="Product Logo">
-        <nav id="nav-bar">
-            <a class="nav-link" href="#features">Features</a>
-            <a class="nav-link" href="#how-it-works">How It Works</a>
-            <a class="nav-link" href="#pricing">Pricing</a>
-        </nav>
-    </header>
-    <main>
-        <section id="features">
-            <h2>Features</h2>
-            <p>Highlight the main features of the product here.</p>
-        </section>
-        <section id="how-it-works">
-            <h2>How It Works</h2>
-            <p>Describe how the product works here.</p>
-        </section>
-        <section id="pricing">
-            <h2>Pricing</h2>
-            <p>Details about the product pricing go here.</p>
-        </section>
-        <section id="video-section">
-            <h2>Product Video</h2>
-            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
-        </section>
-        <section id="form-section">
-            <h2>Subscribe for Updates</h2>
-            <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <input type="submit" id="submit" value="Submit">
-            </form>
-        </section>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap">
+    </head>
+    <body>
+        <div class="background-overlay"></div>
+        <header id="header">
+            <img id="header-img" src="./galactic_republic_logo.png" alt="Product Logo">
+            <nav id="nav-bar">
+                <a class="nav-link" href="#features">The Product</a>
+                <a class="nav-link" href="#contact">Get In Touch</a>
+            </nav>
+        </header>
+        <main>
+            <section id="how-it-works">
+                <h2>THE REPUBLIC NEEDS YOU</h2>
+                <iframe id="video" width="70%" height="500" src="https://www.youtube.com/embed/SAkcolVxDy0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </section>
+            <section id="features">
+                <h2>CHOOSE YOUR HELMET</h2>
+                <div class="products">
+                    <div class="product">
+                        <h3>Phase 1 Helmet</h3>
+                        <img src="./phase1_helmet.png" alt="Phase 1 Helmet">
+                        <div class="description">
+                            <p>Experience the original Clone Wars with the Phase 1 Helmet. This design features advanced protection and communication systems, making it a favorite among early Clone Troopers.</p>
+                            <p class="price">$399.99</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <h3>Phase 2 Helmet</h3>
+                        <img src="./phasd2_helmet.png" alt="Phase 2 Helmet">
+                        <div class="description">
+                            <p>Step into the enhanced battlefields with the Phase 2 Helmet. Upgraded for improved comfort and vision, this helmet is essential for any trooper in the thick of the fight.</p>
+                            <p class="price">$499.99</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <h2>GET IN TOUCH</h2>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <div class="form-group">
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number (Optional)">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Further Comments (Optional)"></textarea>
+                    </div>
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+        <div class="copyrightText">
+            <p>Copyright <i class="fa fa-copyright"></i> 2024. Made by Wojciech J Ochman for the purpose of acquiring the freeCodeCamp Responsive Web Design certificate. All Rights Reserved.</p>
+        </div>
+    </body>
 </html>
