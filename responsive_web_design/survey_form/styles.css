@@ -227,31 +227,6 @@ body {
     text-align: center;
 }
 
-/*--- Footer ---*/
-
-.footer {
-    background-color: #38393B;
-    padding: 20px;
-    text-align: center;
-}
-
-.footerTitle h2 {
-    font-size: 18px;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.footerLinks a {
-    color: white;
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footerLinks a:hover {
-    color: #ddd;
-}
-
 /*--- Copyright ---*/
 
 .copyrightText {
