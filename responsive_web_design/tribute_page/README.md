@@ -12,4 +12,4 @@
 9. Your `img` element should be centered within its parent element.
 
 ## Survey Form Screenshot
-![Alt text](/responsive_web_design/tribute_page/project_screenshot.png)
+![Alt text](/responsive_web_design/tribute_page/media/project_screenshot.png)

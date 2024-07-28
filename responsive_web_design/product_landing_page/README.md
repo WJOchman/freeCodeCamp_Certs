@@ -18,4 +18,4 @@
 15. Your product landing page should utilize CSS flexbox at least once.
 
 ## Survey Form Screenshot
-![Alt text](/responsive_web_design/product_landing_page/project_screenshot.png)
+![Alt text](/responsive_web_design/product_landing_page/media/project_screenshot.png)

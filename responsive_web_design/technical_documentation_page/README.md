@@ -18,4 +18,4 @@
 15. Your technical documentation should use at least one media query.
 
 ## Survey Form Screenshot
-![Alt text](/responsive_web_design/technical_documentation_page/project_screenshot.png)
+![Alt text](/responsive_web_design/technical_documentation_page/media/project_screenshot.png)
