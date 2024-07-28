@@ -36,19 +36,41 @@ body {
 
 #welcome-section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
-    background: url('path_to_background_image.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: white;
+    padding: 20px;
+}
+
+.welcome-content {
+    max-width: 800px;
 }
 
 #welcome-section h1 {
     font-size: 3em;
     margin-bottom: 20px;
+}
+
+#welcome-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
 }
 
 #projects {
@@ -81,35 +103,14 @@ body {
 
 .project-tile img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Crop the image to fit within the specified height */
+    object-position: top; /* Align image from the top */
 }
 
 .project-tile p {
     padding: 10px;
     font-size: 1.2em;
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footerTitle h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.footerLinks a {
-    color: white;
-    font-size: 1.5em;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footerLinks a:hover {
-    color: #ddd;
 }
 
 .copyrightText {
