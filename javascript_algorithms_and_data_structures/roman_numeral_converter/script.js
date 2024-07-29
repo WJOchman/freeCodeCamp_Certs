@@ -20,6 +20,7 @@ document.getElementById('convert-btn').addEventListener('click', function() {
 
     const romanNumeral = convertToRoman(number);
     outputElement.textContent = romanNumeral;
+    
 });
 
 function convertToRoman(num) {
