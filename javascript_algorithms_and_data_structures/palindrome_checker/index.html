@@ -5,12 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindrome Checker</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <input type="text" id="text-input" placeholder="Enter text here">
-    <button id="check-btn">Check</button>
-    <div id="result"></div>
+    <div class="container">
+        <header>
+            <h1>Palindrome Checker for freeCodeCamp</h1>
+        </header>
+        <main>
+            <input type="text" id="text-input" placeholder="Enter text here">
+            <button id="check-btn">Check</button>
+            <div id="result"></div>
+        </main>
+        <div class="copyrightText">
+            <p>Copyright <i class="fa fa-copyright"></i> 2024. Made by Wojciech J Ochman for the purpose of acquiring the freeCodeCamp JavaScript Algorithms and Data Structures certificate. All Rights Reserved.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('check-btn').addEventListener('click', checkPalindrome);
+        document.getElementById('text-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkPalindrome();
+            }
+        });
 
-    <script src="script.js"></script>
+        function checkPalindrome() {
+            const inputElement = document.getElementById('text-input');
+            const resultElement = document.getElementById('result');
+            const text = inputElement.value;
+
+            if (!text) {
+                alert('Please input a value');
+                return;
+            }
+
+            // Function to clean and process the text
+            const cleanText = (str) => {
+                return str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+            };
+
+            const originalText = text;
+            const cleanedText = cleanText(text);
+            const reversedText = cleanedText.split('').reverse().join('');
+
+            if (cleanedText === reversedText) {
+                resultElement.textContent = `"${originalText}" is a palindrome`;
+            } else {
+                resultElement.textContent = `"${originalText}" is not a palindrome`;
+            }
+        }
+    </script>
 </body>
 </html>
