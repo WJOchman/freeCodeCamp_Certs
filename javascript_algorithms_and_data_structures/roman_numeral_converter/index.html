@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roman Numeral Converter</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Roman Numeral Converter</h1>
-        <input type="number" id="number" placeholder="Enter a number">
-        <button id="convert-btn">Convert</button>
-        <div id="output"></div>
+        <header>
+            <h1>Roman Numeral Converter</h1>
+        </header>
+        <div class="instructions">
+            <h2>How to Use:</h2>
+            <p>Enter a number in the input box below and click the "Convert" button to see the Roman numeral equivalent.</p>
+        </div>
+        <main>
+            <input type="text" id="number-input" placeholder="Enter a number">
+            <button id="convert-btn">Convert</button>
+            <div id="result"></div>
+        </main>
+        <div class="copyrightText">
+            <p>Copyright <i class="fa fa-copyright"></i> 2024. Made by Wojciech J Ochman for the purpose of acquiring the freeCodeCamp JavaScript Algorithms and Data Structures certificate. All Rights Reserved.</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
