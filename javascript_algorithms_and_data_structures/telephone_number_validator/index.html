@@ -5,15 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US Phone Number Validator</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>US Phone Number Validator</h1>
-        <input type="text" id="user-input" placeholder="Enter phone number">
-        <button id="check-btn">Check</button>
-        <button id="clear-btn">Clear</button>
-        <div id="results-div"></div>
+        <header>
+            <h1>US Phone Number Validator</h1>
+        </header>
+        <div class="instructions">
+            <h2>How to Use:</h2>
+            <p>Enter a phone number in the input box below and click the "Check" button to validate the number. Use the "Clear" button to reset the input.</p>
+        </div>
+        <main>
+            <input type="text" id="phone-input" placeholder="Enter phone number">
+            <div class="button-container">
+                <button id="check-btn">Check</button>
+                <button id="clear-btn">Clear</button>
+            </div>
+            <div id="result"></div>
+        </main>
+        <div class="copyrightText">
+            <p>Copyright <i class="fa fa-copyright"></i> 2024. Made by Wojciech J Ochman for the purpose of acquiring the freeCodeCamp JavaScript Algorithms and Data Structures certificate. All Rights Reserved.</p>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('check-btn').addEventListener('click', checkPhoneNumber);
+        document.getElementById('clear-btn').addEventListener('click', clearInput);
+        document.getElementById('phone-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                checkPhoneNumber();
+            }
+        });
+
+        function checkPhoneNumber() {
+            const inputElement = document.getElementById('phone-input');
+            const resultElement = document.getElementById('result');
+            const phoneNumber = inputElement.value;
+
+            if (!phoneNumber) {
+                alert('Please input a value');
+                return;
+            }
+
+            const phonePattern = /^(1\s?)?(\(\d{3}\)|\d{3})([-\s]?)\d{3}([-.\s]?)\d{4}$/;
+            if (phonePattern.test(phoneNumber)) {
+                resultElement.textContent = `"${phoneNumber}" is a valid US phone number.`;
+            } else {
+                resultElement.textContent = `"${phoneNumber}" is not a valid US phone number.`;
+            }
+        }
+
+        function clearInput() {
+            document.getElementById('phone-input').value = '';
+            document.getElementById('result').textContent = '';
+        }
+    </script>
 </body>
 </html>
