@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Search App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Pokémon Search</h1>
-        <input type="text" id="search-input" placeholder="Enter Pokémon name or ID">
-        <button id="search-button">Search</button>
-        <div id="results">
-            <h2 id="pokemon-name"></h2>
-            <img id="sprite" alt="Pokémon Sprite">
-            <p id="pokemon-id"></p>
-            <p id="weight"></p>
-            <p id="height"></p>
-            <div id="stats">
-                <p id="hp"></p>
-                <p id="attack"></p>
-                <p id="defense"></p>
-                <p id="special-attack"></p>
-                <p id="special-defense"></p>
-                <p id="speed"></p>
+        <header>
+            <h1>Pokémon Search</h1>
+        </header>
+        <div class="instructions">
+            <h2>How to Use:</h2>
+            <p>Enter a Pokémon name or ID in the input box below and click the "Search" button to find the Pokémon. The Pokémon details will be displayed below.</p>
+        </div>
+        <main>
+            <input type="text" id="search-input" placeholder="Enter Pokémon name or ID">
+            <button id="search-button">Search</button>
+            <div id="results">
+                <h2 id="pokemon-name"></h2>
+                <img id="sprite" alt="Pokémon Sprite">
+                <p id="pokemon-id"></p>
+                <p id="weight"></p>
+                <p id="height"></p>
+                <div id="stats">
+                    <p id="hp"></p>
+                    <p id="attack"></p>
+                    <p id="defense"></p>
+                    <p id="special-attack"></p>
+                    <p id="special-defense"></p>
+                    <p id="speed"></p>
+                </div>
+                <div id="types"></div>
             </div>
-            <div id="types"></div>
+        </main>
+        <div class="copyrightText">
+            <p>Copyright <i class="fa fa-copyright"></i> 2024. Made by Wojciech J Ochman for the purpose of acquiring the freeCodeCamp JavaScript Algorithms and Data Structures certificate. All Rights Reserved.</p>
         </div>
     </div>
     <script src="script.js"></script>
