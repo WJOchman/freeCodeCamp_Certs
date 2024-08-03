@@ -17,5 +17,5 @@
 14. On regular sized devices (laptops, desktops), the element with `id="navbar"` should be shown on the left side of the screen and should always be visible to the user.
 15. Your technical documentation should use at least one media query.
 
-## Survey Form Screenshot
+## Technical Documentation Page Screenshot
 ![Alt text](/responsive_web_design/technical_documentation_page/media/project_screenshot.png)

@@ -17,5 +17,5 @@
 14. Your product landing page should have at least one media query.
 15. Your product landing page should utilize CSS flexbox at least once.
 
-## Survey Form Screenshot
+## Product Landing Page Screenshot
 ![Alt text](/responsive_web_design/product_landing_page/media/project_screenshot.png)

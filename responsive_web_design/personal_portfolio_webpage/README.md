@@ -13,5 +13,5 @@
 10. The height of the welcome section should be equal to the height of the viewport.
 11. The navbar should always be at the top of the viewport.
 
-## Survey Form Screenshot
+## Personal Portfolio Webpage Screenshot
 ![Alt text](/responsive_web_design/personal_portfolio_webpage/media/project_screenshot.png)

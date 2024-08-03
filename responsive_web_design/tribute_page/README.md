@@ -11,5 +11,5 @@
 8. Your `#image` should use `max-width` and `height` properties to resize responsively, relative to the width of its parent element, without exceeding its original size.
 9. Your `img` element should be centered within its parent element.
 
-## Survey Form Screenshot
+## Tribute Page Screenshot
 ![Alt text](/responsive_web_design/tribute_page/media/project_screenshot.png)
