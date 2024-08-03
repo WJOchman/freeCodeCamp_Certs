@@ -1,5 +1,5 @@
 document.getElementById('convert-btn').addEventListener('click', convertToRoman);
-document.getElementById('number-input').addEventListener('keypress', function(event) {
+document.getElementById('number').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         convertToRoman();
@@ -7,43 +7,50 @@ document.getElementById('number-input').addEventListener('keypress', function(ev
 });
 
 function convertToRoman() {
-    const inputElement = document.getElementById('number-input');
-    const resultElement = document.getElementById('result');
-    const number = parseInt(inputElement.value);
+    const inputElement = document.getElementById('number');
+    const outputElement = document.getElementById('output');
+    const num = parseInt(inputElement.value);
 
-    if (isNaN(number)) {
-        alert('Please input a valid number');
+    if (isNaN(num)) {
+        outputElement.textContent = 'Please enter a valid number';
         return;
     }
 
-    resultElement.textContent = `${number} in Roman numerals is ${toRoman(number)}`;
-}
+    if (num < 1) {
+        outputElement.textContent = 'Please enter a number greater than or equal to 1';
+        return;
+    }
 
-function toRoman(num) {
-    const romanNumeralMap = [
-        { value: 1000, numeral: 'M' },
-        { value: 900, numeral: 'CM' },
-        { value: 500, numeral: 'D' },
-        { value: 400, numeral: 'CD' },
-        { value: 100, numeral: 'C' },
-        { value: 90, numeral: 'XC' },
-        { value: 50, numeral: 'L' },
-        { value: 40, numeral: 'XL' },
-        { value: 10, numeral: 'X' },
-        { value: 9, numeral: 'IX' },
-        { value: 5, numeral: 'V' },
-        { value: 4, numeral: 'IV' },
-        { value: 1, numeral: 'I' }
+    if (num >= 4000) {
+        outputElement.textContent = 'Please enter a number less than or equal to 3999';
+        return;
+    }
+
+    const romanNumerals = [
+        ['M', 1000],
+        ['CM', 900],
+        ['D', 500],
+        ['CD', 400],
+        ['C', 100],
+        ['XC', 90],
+        ['L', 50],
+        ['XL', 40],
+        ['X', 10],
+        ['IX', 9],
+        ['V', 5],
+        ['IV', 4],
+        ['I', 1]
     ];
 
-    let result = '';
+    let roman = '';
+    let remaining = num;
 
-    for (const { value, numeral } of romanNumeralMap) {
-        while (num >= value) {
-            result += numeral;
-            num -= value;
+    for (const [letter, value] of romanNumerals) {
+        while (remaining >= value) {
+            roman += letter;
+            remaining -= value;
         }
     }
 
-    return result;
+    outputElement.textContent = roman;
 }
