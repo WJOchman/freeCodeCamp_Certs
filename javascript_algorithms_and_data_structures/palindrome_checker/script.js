@@ -26,8 +26,8 @@ function checkPalindrome() {
     const reversedText = cleanedText.split('').reverse().join('');
 
     if (cleanedText === reversedText) {
-        resultElement.textContent = `"${originalText}" is a palindrome`;
+        resultElement.textContent = `${originalText} is a palindrome`;
     } else {
-        resultElement.textContent = `"${originalText}" is not a palindrome`;
+        resultElement.textContent = `${originalText} is not a palindrome`;
     }
 }
