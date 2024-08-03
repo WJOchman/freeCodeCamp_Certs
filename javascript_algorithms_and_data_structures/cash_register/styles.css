@@ -80,7 +80,7 @@ main label {
     margin-bottom: 5px;
 }
 
-#cash-input {
+#cash {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -121,7 +121,7 @@ main label {
     background-color: #5a6268;
 }
 
-#result {
+#change-due {
     margin-top: 20px;
     font-size: 18px;
     color: #333;

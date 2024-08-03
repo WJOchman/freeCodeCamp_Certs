@@ -1,31 +1,55 @@
-let price = 19.5;
-let cid = [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]];
+let price = 20;
+let cid = [
+    ["PENNY", 1.01],
+    ["NICKEL", 2.05],
+    ["DIME", 3.1],
+    ["QUARTER", 4.25],
+    ["ONE", 90],
+    ["FIVE", 55],
+    ["TEN", 20],
+    ["TWENTY", 60],
+    ["ONE HUNDRED", 100]
+];
 
-document.getElementById('purchase-btn').addEventListener('click', function() {
-    const cashElement = document.getElementById('cash');
-    const outputElement = document.getElementById('change-due');
-    const cash = parseFloat(cashElement.value);
+document.getElementById('purchase-btn').addEventListener('click', processPurchase);
+document.getElementById('clear-btn').addEventListener('click', clearInput);
+document.getElementById('cash').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        processPurchase();
+    }
+});
 
-    if (isNaN(cash) || cash <= 0) {
+function processPurchase() {
+    const inputElement = document.getElementById('cash');
+    const resultElement = document.getElementById('change-due');
+    const cashProvided = parseFloat(inputElement.value);
+
+    if (isNaN(cashProvided) || cashProvided <= 0) {
         alert('Please provide a valid amount of cash');
         return;
     }
 
-    if (cash < price) {
+    if (cashProvided < price) {
         alert('Customer does not have enough money to purchase the item');
         return;
     }
 
-    const change = cash - price;
+    if (cashProvided === price) {
+        resultElement.textContent = 'No change due - customer paid with exact cash';
+        return;
+    }
+
+    const change = cashProvided - price;
     const result = getChange(change, cid);
 
-    outputElement.textContent = result;
-});
+    resultElement.textContent = result;
+}
 
-document.getElementById('clear-btn').addEventListener('click', function() {
+function clearInput() {
     document.getElementById('change-due').textContent = '';
     document.getElementById('cash').value = '';
-});
+}
 
 function getChange(change, cid) {
     const currencyUnits = [
