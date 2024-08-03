@@ -49,3 +49,6 @@ Note that the area code is required. Also, if the country code is provided, you 
 32. When `#user-input` contains `(555)5(55?)-5555` and `#check-btn` is clicked, `#results-div` should contain the text `"Invalid US number: (555)5(55?)-5555"`.
 33. When the `#user-input` element contains `55 55-55-555-5` and the `#check-btn` element is clicked, the `#results-div` element should contain the text `"Invalid US number: 55 55-55-555-5"`.
 34. When the `#user-input` element contains `11 555-555-5555` and the `#check-btn` element is clicked, the `#results-div` element should contain the text `"Invalid US number: 11 555-555-5555"`.
+
+## US Telephone Number Validator Screenshot
+![Alt text](/javascript_algorithms_and_data_structures/telephone_number_validator/media/project_screenshot.png)

@@ -1,6 +1,6 @@
 document.getElementById('check-btn').addEventListener('click', validatePhoneNumber);
 document.getElementById('clear-btn').addEventListener('click', clearInput);
-document.getElementById('phone-input').addEventListener('keypress', function(event) {
+document.getElementById('user-input').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         validatePhoneNumber();
@@ -8,25 +8,25 @@ document.getElementById('phone-input').addEventListener('keypress', function(eve
 });
 
 function validatePhoneNumber() {
-    const inputElement = document.getElementById('phone-input');
-    const resultElement = document.getElementById('result');
-    const phoneNumber = inputElement.value;
-
-    const phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})([\s\-]?)\d{3}([\s\-]?)\d{4}$/;
+    const inputElement = document.getElementById('user-input');
+    const resultElement = document.getElementById('results-div');
+    const phoneNumber = inputElement.value.trim();
 
     if (!phoneNumber) {
-        alert('Please input a phone number');
+        alert('Please provide a phone number');
         return;
     }
 
-    if (phoneRegex.test(phoneNumber)) {
-        resultElement.textContent = `"${phoneNumber}" is a valid US phone number`;
+    const validPattern = /^(1\s?)?(\(\d{3}\)|\d{3})([\s\-]?)\d{3}([\s\-]?)\d{4}$/;
+
+    if (validPattern.test(phoneNumber)) {
+        resultElement.textContent = `Valid US number: ${phoneNumber}`;
     } else {
-        resultElement.textContent = `"${phoneNumber}" is not a valid US phone number`;
+        resultElement.textContent = `Invalid US number: ${phoneNumber}`;
     }
 }
 
 function clearInput() {
-    document.getElementById('phone-input').value = '';
-    document.getElementById('result').textContent = '';
+    document.getElementById('user-input').value = '';
+    document.getElementById('results-div').textContent = '';
 }

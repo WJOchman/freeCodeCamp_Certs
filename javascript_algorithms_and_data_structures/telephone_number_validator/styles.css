@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #f0f0f0;
+    background: url('./media/telephone_wallpaper.jpg') repeat; /* Update with your image path */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +55,7 @@ header h1 {
 }
 
 .instructions p {
-    text-align: center;
+    text-align: justify;
     font-size: 1em;
     color: #666;
 }
@@ -74,7 +74,7 @@ main {
     margin-top: -10px; /* Adjusted for closer spacing */
 }
 
-#phone-input {
+#user-input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -115,7 +115,7 @@ main {
     background-color: #5a6268;
 }
 
-#result {
+#results-div {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
