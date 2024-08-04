@@ -21,8 +21,8 @@ document.getElementById('search-button').addEventListener('click', function() {
 function displayPokemon(data) {
     document.getElementById('pokemon-name').textContent = data.name.toUpperCase();
     document.getElementById('pokemon-id').textContent = `#${data.id}`;
-    document.getElementById('weight').textContent = `Weight: ${data.weight}`;
-    document.getElementById('height').textContent = `Height: ${data.height}`;
+    document.getElementById('weight').textContent = `Weight: ${data.weight / 10} kg`;
+    document.getElementById('height').textContent = `Height: ${data.height / 10} m`;
     document.getElementById('hp').textContent = `HP: ${data.stats[0].base_stat}`;
     document.getElementById('attack').textContent = `Attack: ${data.stats[1].base_stat}`;
     document.getElementById('defense').textContent = `Defense: ${data.stats[2].base_stat}`;
