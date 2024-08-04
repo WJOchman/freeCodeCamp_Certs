@@ -1,104 +1,91 @@
-let price = 20;
-let cid = [
-    ["PENNY", 1.01],
-    ["NICKEL", 2.05],
-    ["DIME", 3.1],
-    ["QUARTER", 4.25],
-    ["ONE", 90],
-    ["FIVE", 55],
-    ["TEN", 20],
-    ["TWENTY", 60],
-    ["ONE HUNDRED", 100]
-];
+let price = 0;
+let cid = [];
 
-document.getElementById('purchase-btn').addEventListener('click', processPurchase);
-document.getElementById('clear-btn').addEventListener('click', clearInput);
-document.getElementById('cash').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        processPurchase();
+document.getElementById('purchase-btn').addEventListener('click', function () {
+    let cash = parseFloat(document.getElementById('cash').value);
+
+    if (cash < price) {
+        alert("Customer does not have enough money to purchase the item");
+        return;
+    }
+
+    let change = cash - price;
+    let changeDueElement = document.getElementById('change-due');
+
+    if (change === 0) {
+        changeDueElement.textContent = "No change due - customer paid with exact cash";
+        return;
+    }
+
+    let changeArray = getChange(change);
+
+    if (changeArray === "INSUFFICIENT_FUNDS") {
+        changeDueElement.textContent = "Status: INSUFFICIENT_FUNDS";
+    } else if (changeArray.status === "CLOSED") {
+        changeDueElement.textContent = "Status: CLOSED " + formatChange(changeArray.change);
+    } else {
+        changeDueElement.textContent = "Status: OPEN " + formatChange(changeArray);
     }
 });
 
-function processPurchase() {
-    const inputElement = document.getElementById('cash');
-    const resultElement = document.getElementById('change-due');
-    const cashProvided = parseFloat(inputElement.value);
-
-    if (isNaN(cashProvided) || cashProvided <= 0) {
-        alert('Please provide a valid amount of cash');
-        return;
-    }
-
-    if (cashProvided < price) {
-        alert('Customer does not have enough money to purchase the item');
-        return;
-    }
-
-    if (cashProvided === price) {
-        resultElement.textContent = 'No change due - customer paid with exact cash';
-        return;
-    }
-
-    const change = cashProvided - price;
-    const result = getChange(change, cid);
-
-    resultElement.textContent = result;
-}
-
-function clearInput() {
-    document.getElementById('change-due').textContent = '';
-    document.getElementById('cash').value = '';
-}
-
-function getChange(change, cid) {
-    const currencyUnits = [
-        { name: "ONE HUNDRED", value: 100 },
-        { name: "TWENTY", value: 20 },
-        { name: "TEN", value: 10 },
-        { name: "FIVE", value: 5 },
-        { name: "ONE", value: 1 },
-        { name: "QUARTER", value: 0.25 },
-        { name: "DIME", value: 0.1 },
-        { name: "NICKEL", value: 0.05 },
-        { name: "PENNY", value: 0.01 }
+function getChange(change) {
+    const denominations = [
+        ["PENNY", 0.01],
+        ["NICKEL", 0.05],
+        ["DIME", 0.1],
+        ["QUARTER", 0.25],
+        ["ONE", 1],
+        ["FIVE", 5],
+        ["TEN", 10],
+        ["TWENTY", 20],
+        ["ONE HUNDRED", 100]
     ];
 
-    let totalCid = cid.reduce((sum, current) => sum + current[1], 0);
-    totalCid = parseFloat(totalCid.toFixed(2));
+    let totalCid = cid.reduce((sum, curr) => sum + curr[1], 0);
 
     if (totalCid < change) {
-        return "Status: INSUFFICIENT_FUNDS";
+        return "INSUFFICIENT_FUNDS";
     }
 
-    if (totalCid === change) {
-        return `Status: CLOSED ${cid.map(curr => `${curr[0]}: $${curr[1]}`).join(' ')}`;
-    }
-
-    let changeDue = [];
+    let changeArray = [];
     let remainingChange = change;
 
-    for (let unit of currencyUnits) {
-        let unitName = unit.name;
-        let unitValue = unit.value;
-        let amountInDrawer = cid.find(curr => curr[0] === unitName)[1];
-        let amountToReturn = 0;
+    for (let i = denominations.length - 1; i >= 0; i--) {
+        let denomName = denominations[i][0];
+        let denomValue = denominations[i][1];
+        let denomInDrawer = cid.find(curr => curr[0] === denomName)[1];
 
-        while (remainingChange >= unitValue && amountInDrawer > 0) {
-            remainingChange -= unitValue;
-            remainingChange = parseFloat(remainingChange.toFixed(2));
-            amountInDrawer -= unitValue;
-            amountToReturn += unitValue;
-        }
-
-        if (amountToReturn > 0) {
-            changeDue.push(`${unitName}: $${amountToReturn.toFixed(2)}`);
+        if (remainingChange >= denomValue && denomInDrawer > 0) {
+            let denomToReturn = 0;
+            while (remainingChange >= denomValue && denomInDrawer > 0) {
+                denomToReturn += denomValue;
+                remainingChange -= denomValue;
+                remainingChange = Math.round(remainingChange * 100) / 100; // Fix floating-point issue
+                denomInDrawer -= denomValue;
+            }
+            changeArray.push([denomName, denomToReturn]);
         }
     }
 
     if (remainingChange > 0) {
-        return "Status: INSUFFICIENT_FUNDS";
+        return "INSUFFICIENT_FUNDS";
     }
 
-    return `Status: OPEN ${changeDue.join(' ')}`;
+    if (totalCid === change) {
+        return { status: "CLOSED", change: changeArray };
+    }
+
+    return changeArray;
 }
+
+function formatChange(changeArray) {
+    if (typeof changeArray === "string") {
+        return changeArray;
+    }
+
+    return changeArray.map(item => `${item[0]}: $${item[1].toFixed(2)}`).join(" ");
+}
+
+// Sample data for testing
+price = 19.5;
+cid = [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
