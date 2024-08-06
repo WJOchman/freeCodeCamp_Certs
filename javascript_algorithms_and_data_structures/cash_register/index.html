@@ -8,11 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Cash Register</h1>
-        <label for="cash">Enter cash given:</label>
-        <input type="number" id="cash" />
-        <button id="purchase-btn">Purchase</button>
-        <p id="change-due"></p>
+        <div class="info-box">
+            <h2>Welcome to the Cash Register App</h2>
+            <p>This application helps you calculate the change due to a customer when they make a purchase. Follow these steps:</p>
+            <ol>
+                <li>Enter the cash given by the customer.</li>
+                <li>Click the "Purchase" button.</li>
+                <li>See the change due and its breakdown in denominations.</li>
+            </ol>
+        </div>
+        <div class="register-box">
+            <h1>Cash Register</h1>
+            <label for="cash">Enter cash given:</label>
+            <input type="number" id="cash" />
+            <button id="purchase-btn">Purchase</button>
+            <p id="change-due"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

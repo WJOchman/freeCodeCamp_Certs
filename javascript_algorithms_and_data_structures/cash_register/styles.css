@@ -9,14 +9,26 @@ body {
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-box, .register-box {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
     text-align: center;
 }
 
-h1 {
+.info-box h2 {
+    margin-bottom: 10px;
+}
+
+.register-box h1 {
     margin-bottom: 20px;
 }
 
