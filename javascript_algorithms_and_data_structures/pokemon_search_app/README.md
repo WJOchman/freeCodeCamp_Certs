@@ -23,3 +23,6 @@ In this project, you'll build an app that will search for Pokemon by name or ID 
 18. When the `#search-input` element contains the value `94` and the `#search-button` element is clicked, the values in the `#pokemon-name`, `#pokemon-id`, `#weight`, `#height`, `#hp`, `#attack`, `#defense`, `#special-attack`, `#special-defense`, and `#speedelements` should be `GENGAR`, `#94` or `94`, `Weight: 405` or `405`, `Height: 15` or `15`, `60`, `65`, `60`, `130`, `75`, and `110`, respectively.
 19. When the `#search-input` element contains the value `94` and the `#search-button` element is clicked, you should add an `img` element with the `id` of `sprite` and the `src` set to the Pokémon's `front_default` sprite to the page.
 20. When the `#search-input` element contains the value `94` and the `#search-button` element is clicked, the `#types` element should contain two inner elements with the text values `GHOST` and `POISON`, respectively. The `#types` element content should be cleared between searches.
+
+## Pokemon Search App Screenshot
+![Alt text](/javascript_algorithms_and_data_structures/pokemon_search_app/media/project_screenshot.png)
