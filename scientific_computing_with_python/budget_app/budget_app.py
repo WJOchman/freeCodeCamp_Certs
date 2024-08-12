@@ -51,16 +51,16 @@ def create_spend_chart(categories):
     # Create the bar chart
     chart = "Percentage spent by category\n"
     for i in range(100, -1, -10):
-        chart += f"{i:>3}|"
+        chart += f"{str(i).rjust(3)}| "
         for percentage in percentages:
             if percentage >= i:
-                chart += " o "
+                chart += "o  "
             else:
                 chart += "   "
-        chart += " \n"
+        chart += "\n"
 
     # Bottom line
-    chart += "    -" + "---" * len(categories) + "\n"
+    chart += "    " + "-" * (len(categories) * 3 + 1) + "\n"
 
     # Category names, written vertically
     max_len = max(len(category.name) for category in categories)
@@ -68,10 +68,10 @@ def create_spend_chart(categories):
         chart += "     "
         for category in categories:
             if i < len(category.name):
-                chart += f" {category.name[i]} "
+                chart += f"{category.name[i]}  "
             else:
                 chart += "   "
-        chart += " \n"
+        chart += "\n"
 
     return chart.rstrip("\n")
 
