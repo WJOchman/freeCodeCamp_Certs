@@ -2,6 +2,7 @@
 
 For this challenge, you need to create three math games using Python that incorporate different mathematical concepts and provide interactive experiences for the player. The games are as follows:
 
+## Project Objectives:
 1. Scatter Plot Game
 Objective: Randomly generate points on a graph, and the player must input the correct (x, y) coordinates.
 Difficulty Enhancement: Increase the size of the graph to make it more challenging.
