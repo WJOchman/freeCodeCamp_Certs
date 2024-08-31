@@ -1,1 +1,1 @@
-Project 5: Data Graph Explorer
+# College Algebra with Python | Project 5: Data Graph Explorer
