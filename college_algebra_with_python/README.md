@@ -1,4 +1,4 @@
-mkdir# freeCodeCamp - College Algebra with Python Certificate
+# freeCodeCamp - College Algebra with Python Certificate
 
 To successfully complete this certification, the following projects must be developed:
 1. Multi-Function Calculator

@@ -1,4 +1,4 @@
-For this challenge, you need to create a financial calculator using Python that take input and do the following:
+# College Algebra with Python | Project 4: Financial Calculator
 
 Calculate annuity with monthly or continuous growth
 Calculate monthly mortgage payment
